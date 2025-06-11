@@ -1,6 +1,7 @@
 {
     "llm_config": {
-        "model_name": "gpt-4o",
+         "class": "ollama",
+        "model_name": "llama3.1",
         "verbose": true
     },
     "max_iterations": 2000,

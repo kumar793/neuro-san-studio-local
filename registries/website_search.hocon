@@ -11,7 +11,8 @@
 # END COPYRIGHT
 {
     "llm_config": {
-        "model_name": "gpt-4o",
+         "class": "ollama",
+        "model_name": "llama3.1",
     },
     "tools": [
         # These tool definitions do not have to be in any particular order

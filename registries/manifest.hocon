@@ -21,6 +21,7 @@
     "agent_network_designer.hocon": true,
     "consumer_decision_assistant.hocon": true,
     "airbnb.hocon": true,
+    "demo.hocon" : true,
     "expedia.hocon": true,
     "macys.hocon": true,
     "carmax.hocon": true,

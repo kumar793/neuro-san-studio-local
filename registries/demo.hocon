@@ -1,0 +1,36 @@
+llm_config {
+   "class": "ollama",
+        "model_name": "llama3.1",
+}
+tools = [
+  {
+    name = "Data Analyst"
+    function {
+      description = "Rewrite the User Query with the help of good prompt engineering techniques and get the work done with available tools. You are a data Scientist who works on data and helps with step by step working process of a functionality ."
+      parameters {
+        type = "object"
+      }
+    }
+    instructions = "Use the downstream agents and tools to answer the query"
+    tools = [
+      "Worker"
+    ]
+
+  }
+  {
+    name = "Worker"
+    instructions = "You are responsible for providing the process of implementation step by step."
+    function {
+      description = "Assist user with solution"
+      parameters {
+        "type" = "object",
+        properties {
+            "type" = "string"
+        }
+      }
+    }
+    tools = [
+      "Data Analyst"
+    ]
+  }
+]
