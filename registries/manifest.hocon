@@ -21,8 +21,8 @@
     "agent_network_designer.hocon": true,
     "consumer_decision_assistant.hocon": true,
     "airbnb.hocon": true,
-    "demo.hocon" : true,
     "expedia.hocon": true,
+    "single_agent.hocon":true,
     "macys.hocon": true,
     "carmax.hocon": true,
     "booking.hocon": true,
@@ -34,7 +34,7 @@
     "music_nerd_pro_sly.hocon": true,
     "music_nerd_pro_sly_local.hocon": true,
     "agentforce.hocon": true,
-    "agentspace_adapter.hocon": false,
+    "agentspace_adapter.hocon": true,
     "banking_ops.hocon": true,
     "cpg_agents.hocon": true,
     "insurance_agents.hocon": true,
@@ -49,7 +49,7 @@
     "TherapyVignetteSupervisors.hocon": true,
 
     # Set the following agent network to true before running apps/conscious_assistant/interface_flask.py
-    "conscious_agent.hocon": false,
+    "conscious_agent.hocon": true,
 
     # Before turnining on and running the following agent network, make sure that:
     # The MCP server is running.
