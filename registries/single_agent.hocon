@@ -2,10 +2,41 @@ llm_config {
    "class": "ollama",
     "model_name": "llama3.1",
 }
+
 tools = [
   {
     name = "Single agent"
     instructions = "you are a chatbot assistant for python data analysis"
     command = "Answer in Step by step solutions"
+    tools = [
+      "secondary"
+    ]
+  
+  }
+  {
+    name = "secondary"
+    function {
+      description = "Return the Excel related function for the given query."
+      parameters {
+        type = "object"
+       "parameters": {
+        "type": "object",
+        "properties": {
+            "Query": {
+                "type": "string",
+                "description": "A query related to Excel"
+            }
+        },
+        required = [
+          "Query"
+        ]
+      }
+    }
+  }
+    instructions = "You will handle questions related to Excel."
+    tools = [
+      "Single agent"
+    ]
+   
   }
 ]
